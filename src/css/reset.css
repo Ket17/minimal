@@ -1,0 +1,59 @@
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+.go-top {
+  position: fixed; 
+  right: 50px; 
+  bottom:50px; 
+  cursor: pointer; 
+  display: none;
+  border-radius: 50%;
+  font-size: 20px; 
+  color: var(--blue-font);
+  border: 1px solid var(--blue-font);
+  background-color: #fff;
+  padding: 15px 15px;
+}
+.go-top:hover {
+  color: #fff;
+  border: 1px solid var(--pressed-state);
+  background-color: var(--pressed-state);
+}
+.go-top--show {
+  display: block;
+}
