@@ -1,92 +1,56 @@
-.price-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+/* Andrey */
+.price {
+  padding: 64px 0;
 }
 
 .price-item {
-    border-top: 1px  solid #0A224A;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0;
-    position: relative; 
+  padding: 30px 0;
+  border-top: 1px solid var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .price-item:last-child {
-    border-bottom: 1px  solid #0A224A;
+  border-bottom: 1px solid var(--primary-color);
 }
 
-.price-num {
-    text-align: right;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px; 
-    color: var(--blue-font);
+.price-item:hover .price-item-text,
+.price-item:hover .price-spn {
+color: var(--hover-color);
 }
 
-.price-name {
-    text-transform: uppercase;
-    font-family: Roboto;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--blue-font);
-    padding-left: 0px;
-    transition: all 250ms ease;
+.price-item-text {
+  font-size: 28px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.price-name::after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    bottom: 49px;
-    transform: scaleX(0);
-    transform-origin: right;
-    width: 45px;
-    height: 3px;
-    background-color: var(--blue-font); 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.price-name:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-    transition-delay: 0.5s;
-}
-
-.price-name:hover {
-   padding-left: 70px;
-   transition-delay: 0.5s;
+.price-spn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
-    .price-name {
-        font-size: 32px;
-        line-height: 1.4;
-    }
+  .price {
+    padding: 100px 0;
+  }
 
-    .price-num {
-        font-size: 18px;
-        line-height: 2.5;
-    }
+  .price-item-text {
+    font-size: 32px;
+    line-height: 1.4;
+  }
+
+  .price-spn {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .price-div {
-        max-width: 1098px;
-    }
+  .price > .container {
+    max-width: 1216px;
+  }
 }
-
-
-
-
-
-
-
-  
-    
-  
-
-
